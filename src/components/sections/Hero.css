@@ -1,0 +1,127 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-terminal {
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.hero-overlay--grid {
+  background: radial-gradient(circle at top, rgba(224, 61, 112, 0.35), rgba(4, 4, 10, 0.92));
+  mix-blend-mode: lighten;
+}
+
+.hero-overlay--fade {
+  background: linear-gradient(to bottom, rgba(12, 0, 24, 0.08), rgba(2, 0, 6, 0.88));
+}
+
+.hero-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-width: 240px;
+  height: 3.1rem;
+  padding: 0 2.4rem;
+  border-radius: 999px;
+  font-family: "Dotemp", "Instrument Serif", serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  transition: transform 0.22s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  isolation: isolate;
+}
+
+.hero-cta::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+}
+
+.hero-cta:hover::after {
+  opacity: 1;
+}
+
+.hero-cta:active {
+  transform: translateY(0);
+}
+
+.hero-cta--primary {
+  border: 1px solid #ffffffa6;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 218, 230, 0.92) 45%, rgba(233, 186, 208, 0.88) 100%);
+  color: #16051e;
+  box-shadow:
+    0 20px 35px -24px #e03d70e6,
+    inset 0 0 0 1px #ffffffb3;
+}
+
+.hero-cta--primary::after {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), transparent 60%);
+}
+
+.hero-cta--primary:hover {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, rgba(247, 214, 228, 0.98) 38%, rgba(236, 125, 161, 0.95) 70%, rgba(224, 61, 112, 0.92) 100%);
+  filter: brightness(1.03) saturate(1.08);
+  box-shadow:
+    0 24px 42px -22px rgba(224, 61, 112, 1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.9);
+}
+
+.hero-cta--secondary {
+  border: 1px solid rgba(240, 167, 198, 0.45);
+  background: #08001059;
+  color: rgba(255, 240, 246, 0.82);
+  box-shadow: inset 0 0 0 1px #6908277a;
+}
+
+.hero-cta--secondary::after {
+  background: linear-gradient(120deg, rgba(224, 61, 112, 0.5), rgba(255, 255, 255, 0.08));
+}
+
+.hero-cta--secondary:hover {
+  filter: brightness(1.05);
+  box-shadow:
+    0 18px 36px -24px rgba(224, 61, 112, 0.65),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.hero-cta--secondary:focus-visible {
+  outline: 2px solid rgba(224, 61, 112, 0.55);
+  outline-offset: 3px;
+}
+
+.hero-content {
+  pointer-events: none;
+}
+
+.hero-content .hero-cta {
+  pointer-events: auto;
+}
+
+@media (max-width: 768px) {
+  .hero-cta {
+    width: 100%;
+    max-width: 320px;
+    min-width: unset;
+    font-size: 0.85rem;
+    letter-spacing: 0.28em;
+  }
+}
