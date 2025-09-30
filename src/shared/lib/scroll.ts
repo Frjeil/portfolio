@@ -1,4 +1,4 @@
-import { ScrollSmoother } from "@/lib/gsap";
+import { ScrollSmoother } from "@/shared/lib/gsap";
 
 const normalizeSelector = (target: string) => (target.startsWith("#") ? target : `#${target}`);
 

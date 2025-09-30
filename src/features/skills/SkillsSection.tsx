@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Separator } from "@/components/ui/separator";
-import { PixelCard } from "@/components/PixelCard";
-import { useSectionReveal } from "@/hooks/use-section-reveal";
+import { SkillCard } from "@/features/skills/components/SkillCard";
+import { useSectionReveal } from "@/shared/hooks/use-section-reveal";
 
-interface SkillCard {
+interface SkillCardContent {
   key: string;
   title: string;
   description: string;
@@ -25,7 +25,7 @@ export const SkillsSection = () => {
   const sectionRef = useSectionReveal<HTMLDivElement>({ y: 120 });
 
   const cards = useMemo(
-    () => t("skills.cards", { returnObjects: true }) as SkillCard[],
+    () => t("skills.cards", { returnObjects: true }) as SkillCardContent[],
     [t]
   );
 
@@ -46,7 +46,7 @@ export const SkillsSection = () => {
       </div>
       <div className="grid w-full gap-8 md:grid-cols-2 xl:max-w-5xl">
         {cards.map((card, index) => (
-          <PixelCard
+          <SkillCard
             key={card.key}
             title={card.title}
             description={card.description}

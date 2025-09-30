@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Terminal, TypingAnimation, AnimatedSpan } from "@/components/ui/shadcn-io/terminal";
 import { Badge } from "@/components/ui/badge";
 import { ArrowUpRight } from "lucide-react";
-import { useSectionReveal } from "@/hooks/use-section-reveal";
+import { useSectionReveal } from "@/shared/hooks/use-section-reveal";
 
 interface ProjectCommand {
   prompt: string;
@@ -24,7 +24,6 @@ const PROJECTS_SECTION_ID = "projects" as const;
 export const ProjectsSection = () => {
   const { t } = useTranslation();
   const sectionRef = useSectionReveal<HTMLDivElement>({ y: 120 });
-
 
   const entries = useMemo(
     () => t("projects.entries", { returnObjects: true }) as ProjectEntry[],

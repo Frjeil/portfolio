@@ -9,12 +9,12 @@ import {
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/lib/utils";
 import { useTranslation } from "react-i18next";
-import type { AppLanguage } from "@/i18n/resources";
+import type { AppLanguage } from "@/shared/i18n/resources";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { ArrowDownToLine, Languages, Menu } from "lucide-react";
-import { scrollToSection } from "@/lib/scroll";
+import { scrollToSection } from "@/shared/lib/scroll";
 
 const Logo = (props: React.SVGAttributes<SVGElement>) => (
   <svg
@@ -48,7 +48,7 @@ const Logo = (props: React.SVGAttributes<SVGElement>) => (
   </svg>
 );
 
-export interface Navbar01Props extends React.HTMLAttributes<HTMLElement> {
+export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
   onCtaClick?: () => void;
   ctaHref?: string;
 }
@@ -57,7 +57,7 @@ const sectionIds = ["skills", "projects", "contact"] as const;
 const LANGUAGES: AppLanguage[] = ["en", "it"];
 const SHEET_CLOSE_DELAY_MS = 320;
 
-export const Navbar01 = React.forwardRef<HTMLElement, Navbar01Props>(
+export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
   ({ className, onCtaClick, ctaHref = "#contact", ...props }, ref) => {
     const { t, i18n } = useTranslation();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -263,6 +263,6 @@ export const Navbar01 = React.forwardRef<HTMLElement, Navbar01Props>(
   }
 );
 
-Navbar01.displayName = "Navbar01";
+Navbar.displayName = "Navbar";
 
 export { Logo };

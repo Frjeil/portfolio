@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Instrument Serif";
-  src: url("./assets/InstrumentSerif-Regular.ttf") format("truetype");
+  src: url("/fonts/InstrumentSerif-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "Instrument Serif";
-  src: url("./assets/InstrumentSerif-Italic.ttf") format("truetype");
+  src: url("/fonts/InstrumentSerif-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -20,7 +20,7 @@
 
 @font-face {
   font-family: "Dotemp";
-  src: url("./assets/Dotemp-8bit.ttf") format("truetype");
+  src: url("/fonts/Dotemp-8bit.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

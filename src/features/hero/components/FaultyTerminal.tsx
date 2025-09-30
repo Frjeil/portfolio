@@ -1,8 +1,8 @@
-import { Renderer, Program, Mesh, Color, Triangle } from 'ogl';
-import type React from 'react';
-import { useEffect, useRef, useMemo, useCallback, useState } from 'react';
-import './FaultyTerminal.css';
-import { cn } from '@/lib/utils';
+import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
+import type React from "react";
+import { useEffect, useRef, useMemo, useCallback, useState } from "react";
+import "./FaultyTerminal.css";
+import { cn } from "@/shared/lib/utils";
 
 type Vec2 = [number, number];
 

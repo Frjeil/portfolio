@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { resources, type AppLanguage } from "./resources";
+import { resources, type AppLanguage } from "@/shared/i18n/resources";
 
 export const defaultLanguage: AppLanguage = "it";
 

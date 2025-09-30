@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Github, Linkedin, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import { useSectionReveal } from "@/hooks/use-section-reveal";
+import { useSectionReveal } from "@/shared/hooks/use-section-reveal";
 import "./Contact.css";
 
 const contactLinks = [

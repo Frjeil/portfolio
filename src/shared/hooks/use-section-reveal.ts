@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import type { RefObject } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import { gsap, useGSAP } from "@/shared/lib/gsap";
 
 type RevealOptions = {
   y?: number;

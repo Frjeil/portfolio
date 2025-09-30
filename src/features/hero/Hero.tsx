@@ -2,9 +2,9 @@ import "./Hero.css";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import FaultyTerminal from "@/components/FaultyTerminal";
-import { useSectionReveal } from "@/hooks/use-section-reveal";
-import { scrollToSection } from "@/lib/scroll";
+import FaultyTerminal from "@/features/hero/components/FaultyTerminal";
+import { useSectionReveal } from "@/shared/hooks/use-section-reveal";
+import { scrollToSection } from "@/shared/lib/scroll";
 
 const HERO_SECTION_ID = "hero" as const;
 

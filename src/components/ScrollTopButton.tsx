@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { ArrowUp } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { gsap, ScrollSmoother } from "@/lib/gsap";
+import { gsap, ScrollSmoother } from "@/shared/lib/gsap";
 
 const SHOW_THRESHOLD = 240;
 const SMOOTHER_PROGRESS_THRESHOLD = 0.97;

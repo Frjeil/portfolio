@@ -1,39 +1,39 @@
-.pixel-card {
-  --pixel-accent: var(--accent-color, var(--primary));
-  --pixel-pill-red: #e03d70;
-  --pixel-pill-highlight: color-mix(in srgb, var(--pixel-accent) 40%, var(--pixel-pill-red) 60%);
-  --pixel-pill-shine: color-mix(in srgb, var(--pixel-pill-highlight) 30%, rgba(255, 255, 255, 0.28));
+.skill-card {
+  --skill-accent: var(--accent-color, var(--primary));
+  --skill-pill-red: #e03d70;
+  --skill-pill-highlight: color-mix(in srgb, var(--skill-accent) 40%, var(--skill-pill-red) 60%);
+  --skill-pill-shine: color-mix(in srgb, var(--skill-pill-highlight) 30%, rgba(255, 255, 255, 0.28));
   position: relative;
   isolation: isolate;
   display: flex;
   overflow: hidden;
   border-radius: 0.75rem;
-  border: 1px solid color-mix(in srgb, var(--pixel-accent) 45%, rgba(255, 255, 255, 0.16));
+  border: 1px solid color-mix(in srgb, var(--skill-accent) 45%, rgba(255, 255, 255, 0.16));
   background:
-    color-mix(in srgb, rgba(6, 8, 18, 0.92) 70%, color-mix(in srgb, var(--pixel-accent) 18%, black) 30%);
+    color-mix(in srgb, rgba(6, 8, 18, 0.92) 70%, color-mix(in srgb, var(--skill-accent) 18%, black) 30%);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
   padding: 0;
   gap: 0;
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-.pixel-card[data-slot="card"] {
+.skill-card[data-slot="card"] {
   padding: 0;
   gap: 0;
 }
 
-.pixel-card:hover {
+.skill-card:hover {
   transform: translateY(-6px);
-  border-color: color-mix(in srgb, var(--pixel-accent) 70%, rgba(255, 255, 255, 0.45));
+  border-color: color-mix(in srgb, var(--skill-accent) 70%, rgba(255, 255, 255, 0.45));
   box-shadow:
-    0 22px 46px -32px color-mix(in srgb, var(--pixel-accent) 70%, transparent),
+    0 22px 46px -32px color-mix(in srgb, var(--skill-accent) 70%, transparent),
     inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.pixel-card__frame,
-.pixel-card__grid,
-.pixel-card__glow,
-.pixel-card__scan {
+.skill-card__frame,
+.skill-card__grid,
+.skill-card__glow,
+.skill-card__scan {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -41,17 +41,17 @@
   transition: opacity 0.35s ease;
 }
 
-.pixel-card__frame {
-  background: linear-gradient(140deg, color-mix(in srgb, var(--pixel-accent) 55%, transparent) 0%, transparent 65%);
+.skill-card__frame {
+  background: linear-gradient(140deg, color-mix(in srgb, var(--skill-accent) 55%, transparent) 0%, transparent 65%);
   opacity: 0.35;
   mix-blend-mode: lighten;
 }
 
-.pixel-card:hover .pixel-card__frame {
+.skill-card:hover .skill-card__frame {
   opacity: 0.6;
 }
 
-.pixel-card__grid {
+.skill-card__grid {
   background-image:
     linear-gradient(transparent calc(100% - 1px), rgba(255, 255, 255, 0.08) calc(100% - 1px)),
     linear-gradient(90deg, transparent calc(100% - 1px), rgba(255, 255, 255, 0.08) calc(100% - 1px));
@@ -60,37 +60,37 @@
   mix-blend-mode: screen;
 }
 
-.pixel-card:hover .pixel-card__grid {
+.skill-card:hover .skill-card__grid {
   opacity: 0.3;
 }
 
-.pixel-card__glow {
+.skill-card__glow {
   background:
-    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--pixel-accent) 65%, transparent) 0%, transparent 60%),
-    radial-gradient(circle at 110% 120%, color-mix(in srgb, var(--pixel-accent) 35%, transparent) 20%, transparent 75%);
+    radial-gradient(circle at 0% 0%, color-mix(in srgb, var(--skill-accent) 65%, transparent) 0%, transparent 60%),
+    radial-gradient(circle at 110% 120%, color-mix(in srgb, var(--skill-accent) 35%, transparent) 20%, transparent 75%);
   opacity: 0.32;
   mix-blend-mode: color-dodge;
 }
 
-.pixel-card:hover .pixel-card__glow {
+.skill-card:hover .skill-card__glow {
   opacity: 0.55;
 }
 
-.pixel-card__scan {
+.skill-card__scan {
   inset: -160% -70% 35% -70%;
-  background: linear-gradient(115deg, transparent 45%, color-mix(in srgb, var(--pixel-accent) 65%, rgba(255, 255, 255, 0.75)) 55%, transparent 65%);
+  background: linear-gradient(115deg, transparent 45%, color-mix(in srgb, var(--skill-accent) 65%, rgba(255, 255, 255, 0.75)) 55%, transparent 65%);
   filter: blur(0.75px);
   opacity: 0;
   transform: translate3d(-20%, -40%, 0) rotate(10deg);
-  animation: pixel-card-scan 6.5s linear infinite;
+  animation: skill-card-scan 6.5s linear infinite;
   mix-blend-mode: screen;
 }
 
-.pixel-card:hover .pixel-card__scan {
+.skill-card:hover .skill-card__scan {
   opacity: 0.45;
 }
 
-@keyframes pixel-card-scan {
+@keyframes skill-card-scan {
   0% {
     transform: translate3d(-40%, -60%, 0) rotate(10deg);
   }
@@ -102,12 +102,12 @@
   }
 }
 
-.pixel-card__corner {
+.skill-card__corner {
   --corner-size: 18px;
   position: absolute;
   width: var(--corner-size);
   height: var(--corner-size);
-  background: color-mix(in srgb, var(--pixel-accent) 85%, rgba(18, 18, 24, 0.85));
+  background: color-mix(in srgb, var(--skill-accent) 85%, rgba(18, 18, 24, 0.85));
   box-shadow: 0 0 0 1px rgba(6, 6, 10, 0.75);
   mix-blend-mode: screen;
   pointer-events: none;
@@ -115,35 +115,35 @@
   z-index: 1;
 }
 
-.pixel-card__corner--tl {
+.skill-card__corner--tl {
   top: 0;
   left: 0;
   clip-path: polygon(0 0, 100% 0, 0 100%);
 }
 
-.pixel-card__corner--tr {
+.skill-card__corner--tr {
   top: 0;
   right: 0;
   clip-path: polygon(0 0, 100% 0, 100% 100%);
 }
 
-.pixel-card__corner--bl {
+.skill-card__corner--bl {
   bottom: 0;
   left: 0;
   clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
 
-.pixel-card__corner--br {
+.skill-card__corner--br {
   bottom: 0;
   right: 0;
   clip-path: polygon(100% 0, 0 100%, 100% 100%);
 }
 
-.pixel-card:hover .pixel-card__corner {
-  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--pixel-accent) 80%, transparent));
+.skill-card:hover .skill-card__corner {
+  filter: drop-shadow(0 0 12px color-mix(in srgb, var(--skill-accent) 80%, transparent));
 }
 
-.pixel-card__content {
+.skill-card__content {
   position: relative;
   z-index: 1;
   display: flex;
@@ -152,30 +152,30 @@
   padding: 1.75rem 1.75rem 1.9rem;
 }
 
-.pixel-card__header {
+.skill-card__header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.pixel-card__chip {
+.skill-card__chip {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.48rem 1.1rem;
   border-radius: 0.35rem;
-  border: 1px solid color-mix(in srgb, var(--pixel-accent) 50%, rgba(255, 255, 255, 0.35));
+  border: 1px solid color-mix(in srgb, var(--skill-accent) 50%, rgba(255, 255, 255, 0.35));
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0)),
-    color-mix(in srgb, rgba(10, 12, 24, 0.8) 70%, color-mix(in srgb, var(--pixel-accent) 16%, rgba(0, 0, 0, 0.55)) 30%);
+    color-mix(in srgb, rgba(10, 12, 24, 0.8) 70%, color-mix(in srgb, var(--skill-accent) 16%, rgba(0, 0, 0, 0.55)) 30%);
   color: rgba(255, 255, 255, 0.92);
   font-size: 0.78rem;
-  text-shadow: 0 0 8px color-mix(in srgb, var(--pixel-accent) 60%, transparent);
+  text-shadow: 0 0 8px color-mix(in srgb, var(--skill-accent) 60%, transparent);
   white-space: nowrap;
 }
 
-.pixel-card__chip-text {
+.skill-card__chip-text {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -189,18 +189,18 @@
     0 2px 14px rgba(0, 0, 0, 0.65);
 }
 
-.pixel-card__indicator {
+.skill-card__indicator {
   height: 0.6rem;
   width: 0.6rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--pixel-accent) 100%, rgba(255, 255, 255, 0.35));
+  background: color-mix(in srgb, var(--skill-accent) 100%, rgba(255, 255, 255, 0.35));
   box-shadow:
     0 0 1px 0 rgba(0, 0, 0, 0.9),
-    0 0 9px 1px color-mix(in srgb, var(--pixel-accent) 70%, transparent);
-  animation: pixel-card-indicator 1.8s ease-in-out infinite;
+    0 0 9px 1px color-mix(in srgb, var(--skill-accent) 70%, transparent);
+  animation: skill-card-indicator 1.8s ease-in-out infinite;
 }
 
-@keyframes pixel-card-indicator {
+@keyframes skill-card-indicator {
   0%,
   100% {
     opacity: 0.65;
@@ -212,7 +212,7 @@
   }
 }
 
-.pixel-card__description {
+.skill-card__description {
   color: rgba(255, 255, 255, 0.78);
   font-size: clamp(1.05rem, 0.32vw + 0.98rem, 1.2rem);
   line-height: 1.75;
@@ -221,7 +221,7 @@
   text-align: left;
 }
 
-.pixel-card__list {
+.skill-card__list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -230,76 +230,75 @@
   list-style: none;
 }
 
-.pixel-card__list-item {
-  --pixel-pill-bg: #2a081a;
-  --pixel-pill-border: #e03d70;
-  --pixel-pill-shadow-color: #7d1a3f;
-  --pixel-pill-text: #f8b4c8;
+.skill-card__list-item {
+  --skill-pill-bg: #2a081a;
+  --skill-pill-border: #e03d70;
+  --skill-pill-shadow-color: #7d1a3f;
+  --skill-pill-text: #f8b4c8;
 
   position: relative;
   display: flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.5rem 1rem;
-  background-color: var(--pixel-pill-bg);
-  border: 2px solid var(--pixel-pill-border);
+  background-color: var(--skill-pill-bg);
+  border: 2px solid var(--skill-pill-border);
   border-radius: 6px;
   box-shadow:
-    inset 0 0 0 2px color-mix(in srgb, var(--pixel-pill-bg) 50%, black),
-    4px 4px 0 0 var(--pixel-pill-shadow-color);
+    inset 0 0 0 2px color-mix(in srgb, var(--skill-pill-bg) 50%, black),
+    4px 4px 0 0 var(--skill-pill-shadow-color);
   transition: transform 0.15s ease-out, box-shadow 0.15s ease-out;
   cursor: pointer;
 }
 
-.pixel-card__bullet {
+.skill-card__bullet {
   width: 8px;
   height: 8px;
-  background-color: var(--pixel-pill-border);
+  background-color: var(--skill-pill-border);
   border-radius: 2px;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
-.pixel-card__label {
+.skill-card__label {
   font-family: "VT323", monospace;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--pixel-pill-text);
-  text-shadow: 1px 1px 0 var(--pixel-pill-shadow-color);
+  color: var(--skill-pill-text);
+  text-shadow: 1px 1px 0 var(--skill-pill-shadow-color);
 }
 
-.pixel-card__list-item:hover {
+.skill-card__list-item:hover {
   transform: translate(2px, 2px);
   box-shadow:
-    inset 0 0 0 2px color-mix(in srgb, var(--pixel-pill-bg) 50%, black),
-    2px 2px 0 0 var(--pixel-pill-shadow-color);
+    inset 0 0 0 2px color-mix(in srgb, var(--skill-pill-bg) 50%, black),
+    2px 2px 0 0 var(--skill-pill-shadow-color);
 }
 
-.pixel-card__list-item:active {
+.skill-card__list-item:active {
   transform: translate(4px, 4px);
   box-shadow:
-    inset 0 0 0 2px color-mix(in srgb, var(--pixel-pill-bg) 50%, black),
-    0 0 0 0 var(--pixel-pill-shadow-color);
+    inset 0 0 0 2px color-mix(in srgb, var(--skill-pill-bg) 50%, black),
+    0 0 0 0 var(--skill-pill-shadow-color);
 }
 
 @media (max-width: 640px) {
-  .pixel-card {
+  .skill-card {
     border-radius: 0.6rem;
   }
 
-  .pixel-card__content {
+  .skill-card__content {
     padding: 1.4rem 1.35rem 1.6rem;
     gap: 1.25rem;
   }
 
-  .pixel-card__chip {
+  .skill-card__chip {
     font-size: 0.62rem;
     letter-spacing: 0.36em;
     padding: 0.35rem 0.8rem;
   }
 
-  .pixel-card__list {
+  .skill-card__list {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   }
 }
-
