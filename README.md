@@ -1,6 +1,6 @@
 # FB's Portfolio
 
-Single-page developer portfolio built with React, Vite, and a feature-based architecture. It highlights Hero, Skills, Projects, and Contact sections with smooth GSAP-powered transitions, localized copy (EN/IT - which defaults to IT), and curated UI components inspired by shadcn/ui and the Faulty Terminal shader.
+Single-page developer portfolio built with React, Vite, and a feature-based architecture. It highlights Hero, Skills, Projects, and Contact sections with smooth GSAP-powered transitions, localized copy (EN/IT - which defaults to IT), and curated UI components inspired by shadcn/ui and the Faulty Terminal shader from React Bits.
 
 ![Hero section preview](public/assets/hero-preview.png)
 
