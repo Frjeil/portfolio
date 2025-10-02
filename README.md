@@ -49,7 +49,6 @@ src/
 			components/FaultyTerminal.tsx
 	components/
 		ui/                # shadcn-inspired primitives
-		ScrollTopButton.tsx              # arrow component at the end of the page
 	shared/
 		hooks/             # e.g. use-section-reveal
 		lib/               # gsap, scroll helpers, cn utility
